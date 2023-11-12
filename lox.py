@@ -1,4 +1,6 @@
 class Lox:
+    had_error = False
+
     @staticmethod
     def run(source: str):
         tokens = source.split()
@@ -13,3 +15,12 @@ class Lox:
     @staticmethod
     def run_prompt():
         print("to implement run_prompt")
+
+    @staticmethod
+    def error(line: int, message: str):
+        Lox.report(line, "", message)
+
+    @staticmethod
+    def report(line: int, where: str, message: str):
+        print("[line " + str(line) + "] Error" + where + ": " + message)
+        Lox.had_error = True
