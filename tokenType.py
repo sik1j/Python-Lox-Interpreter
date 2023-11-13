@@ -1,6 +1,7 @@
 from enum import Enum
 
 
+# Enums to help tokenize lox files for scanner
 class TokenType(Enum):
     # Single character tokens
     LEFT_PAREN = 0
