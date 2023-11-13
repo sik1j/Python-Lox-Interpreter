@@ -1,5 +1,6 @@
 from tokenType import TokenType
 
+
 # represents Lox tokens
 class Token:
     def __init__(self, token_type: TokenType, lexeme: str, literal: object, line: int):
